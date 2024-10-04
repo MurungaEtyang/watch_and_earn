@@ -1,0 +1,50 @@
+body {
+    background-color: #001f3f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.loader-container {
+    text-align: center;
+    font-size: large;
+    color: #e2e1eb;
+}
+
+#loader {
+    width: 120px;
+    height: 22px;
+    border-radius: 40px;
+    color: #ffffff;
+    border: 2px solid;
+    position: relative;
+    animation: spin 0.5s linear infinite;
+    margin-bottom: 20px; 
+}
+#loader::before {
+    content: "";
+    position: absolute;
+    margin: 2px;
+    width: 25%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    background: currentColor;
+    animation: l3 1s infinite linear;
+}
+@keyframes l3 {
+    50% { left: 100%; transform: translateX(calc(-100% - 4px)); }
+}
+
+#checkingMessage, #goodToGoMessage {
+    display: none; 
+}
+
+
+h1{
+    color: #ffffff;
+}
